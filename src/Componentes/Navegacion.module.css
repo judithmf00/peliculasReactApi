@@ -1,0 +1,17 @@
+.containerNavegacion .containerNavegacion_ul {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 3px solid teal;
+    height: 50px;
+}
+    .containerNavegacion a{
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .containerNavegacion li{
+        list-style: none;
+    }
