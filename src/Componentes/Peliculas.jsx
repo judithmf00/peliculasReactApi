@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import estilos from "./Peliculas.module.css"
+import { Link } from 'react-router-dom';
 
 const Peliculas = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -24,7 +25,10 @@ const Peliculas = () => {
             <p>{pelicula.vote_average}</p>
             <img className={estilos.imgPelicula} src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}/>
             <h2>{pelicula.title}</h2>
-            <button className={estilos.btnPelicula}>Ver detalles</button>
+            {/* <button className={estilos.btnPelicula}>Ver detalles</button> */}
+            <Link to={`/detalle/${pelicula.id}`} className={estilos.btnPelicula}>
+              Ver detalles
+            </Link>
           </div>
         ))}
       </div>
