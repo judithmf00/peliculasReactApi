@@ -8,7 +8,8 @@ export function Navegacion() {
                 <ul className={estilos.containerNavegacion_ul}>
                     <li>
                         {/* <Link to="/">Inicio</Link> */}
-                        <a href="#">Inicio</a> 
+                        <a href="#">JudiFlix</a> 
+                        
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,91 @@
+
+.peliculas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 40px;
+}
+
+.pelicula{
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+    .pelicula::after{
+        content: " ";
+        height: 0;
+        border-radius: 10px;
+        width: 100%;
+        background-color: #459a96;
+        z-index: 1;
+        position: absolute;
+        bottom:14%;
+        opacity: 0.7;
+        transition: all 0.5s ease; 
+    }
+        .pelicula:hover::after{
+            height: 86%;
+            z-index: 1;
+        }
+
+    .pelicula p{
+        background-color: #459a96;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        line-height: 80px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+    .pelicula p::after{
+        content: "%";
+    }
+    .pelicula .imgPelicula{
+        width: 360px;
+        height: 500px;
+        border-radius: 10px;
+        
+    }
+
+    .pelicula h2{
+        font-size: 20px;
+        height: 80px;
+        color: white;
+        margin: 0;
+        text-transform: uppercase;
+        background-color: #466067;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        z-index: 4;
+    }
+    .btnPelicula{
+        position: absolute;
+        bottom: 35px;
+        left: 100px;
+        padding: 10px 30px;
+        background-color:#484450 ;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        z-index: -1;
+        
+    }
+        .btnPelicula:hover{
+            transform: scale(1.5);
+            opacity: 0.9;
+        }
+
+    .pelicula:hover .btnPelicula{
+        z-index: 3;
+        bottom: 200px;
+        transition: all 0.5s ease; 
+    }
