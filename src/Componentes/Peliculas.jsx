@@ -22,7 +22,7 @@ const Peliculas = () => {
       <div className={estilos.peliculas}>
         {peliculas.map((pelicula) => (
           <div key={pelicula.id} className={estilos.pelicula}>
-            <p>{pelicula.vote_average}</p>
+            <p>{(pelicula.vote_average*10).toFixed(0)}</p>
             <img className={estilos.imgPelicula} src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}/>
             <h2>{pelicula.title}</h2>
             {/* <button className={estilos.btnPelicula}>Ver detalles</button> */}
